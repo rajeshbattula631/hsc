@@ -1,6 +1,18 @@
 package com.example.demo.dto;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="doctor")
 public class Doctor {
+@Id
+@GeneratedValue(strategy=GenerationType.AUTO)
+@Column(nullable=false, updatable=false)
 private Integer doctor_Id;
 private String name;
 private String dr_Location;
